@@ -1,0 +1,1932 @@
+<!doctype html>
+<html lang="nl-NL">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Home | Ahneta Advies</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; border: 0 solid currentColor; }
+html { -webkit-text-size-adjust: 100%; line-height: normal; }
+body { margin: 0; }
+ul, ol, menu { list-style: none; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea, optgroup { font: inherit; color: inherit; background: transparent; border: 0; padding: 0; margin: 0; text-align: inherit; letter-spacing: inherit; }
+button { cursor: pointer; }
+table { border-collapse: separate; border-spacing: 0; }
+img, picture, video, canvas, svg { display: inline-block; }
+/* Lottie runtime fit: the player re-mounts its svg/canvas into an absolute overlay that fills
+   the host's captured (per-viewport, definite) box. Force that runtime media to fit the box so
+   an aspect-mismatched viewBox (e.g. a portrait animation in a shorter, letterboxed source box)
+   can't inflate past the pinned height. Scoped to the runtime-marked host only. */
+[data-ditto-lottie] > div > svg, [data-ditto-lottie] > div > canvas { width: 100%; height: 100%; display: block; }
+h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd { margin: 0; }
+/* Neutralize UA text defaults to inherit so the generator's default-skipping is
+   correct: a property equal to its inherited value is simply not emitted. */
+h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }
+b, strong, th { font-weight: inherit; }
+em, i, cite, var, dfn, address, q { font-style: inherit; }
+small, big, sub, sup { font-size: inherit; }
+sub, sup { vertical-align: inherit; }
+code, kbd, samp, pre, tt, var { font-family: inherit; font-size: inherit; }
+mark { background-color: transparent; color: inherit; }
+abbr[title] { text-decoration: none; }
+fieldset, legend { min-width: 0; }
+
+/* fonts */
+@font-face {
+  font-family: "FontAwesome-tiktok-only";
+  font-style: normal;
+  font-weight: normal;
+  font-display: block;
+  src: url("public/assets/cloned/fonts/73fb36bdfe04.woff") format("woff");
+}
+
+@font-face {
+  font-family: "FontAwesome-twitter-x-only";
+  font-style: normal;
+  font-weight: normal;
+  font-display: block;
+  src: url("public/assets/cloned/fonts/2b1c45df8b2f.woff") format("woff");
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  font-display: block;
+  src: url("public/assets/cloned/fonts/a040c38e4d54.woff2") format("woff2"), url("public/assets/cloned/fonts/c6e9f47226ab.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/18864529780d.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/14b2770cf034.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/8a05afe62bf0.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/d4450f27216b.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/0c9b0c8b4c97.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/cc8f35526380.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/ab8d749e7c13.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/702e3b8ce946.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/94ad7e273b77.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/f09fcf0e7493.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/91ee0a234ed6.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/b0cd9a1eee41.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "odoo_ui_icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: block;
+  src: url("public/assets/cloned/fonts/5b071d451d97.woff2") format("woff2"), url("public/assets/cloned/fonts/4fbc4425eefd.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/36724da14cb9.woff2") format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/9b0d5b38ed06.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/9bb3ad85cf95.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/5d6cdb0d0955.woff2") format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/0462894415ec.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/cea7c2e86153.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/36724da14cb9.woff2") format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/9b0d5b38ed06.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/9bb3ad85cf95.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/5d6cdb0d0955.woff2") format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/0462894415ec.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/cea7c2e86153.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/36724da14cb9.woff2") format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/9b0d5b38ed06.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/9bb3ad85cf95.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/5d6cdb0d0955.woff2") format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/0462894415ec.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("public/assets/cloned/fonts/cea7c2e86153.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* tokens */
+:root {
+  --background: rgb(255, 255, 255);
+  --foreground: rgb(33, 37, 41);
+  --primary: rgb(209, 247, 243);
+  --accent: rgb(207, 18, 86);
+  --border: rgb(251, 244, 249);
+  --muted-foreground: rgb(108, 117, 125);
+  --surface: rgb(229, 223, 228);
+  --surface-2: rgba(255, 255, 255, 0.9);
+  --color-001: rgba(0, 0, 0, 0.55);
+  --color-002: rgb(174, 15, 72);
+  --color-003: rgba(255, 255, 255, 0.7);
+  --color-004: rgba(0, 0, 0, 0.5);
+  --color-005: rgb(155, 14, 65);
+  --color-006: rgba(0, 0, 0, 0.1);
+  --color-007: rgba(0, 0, 0, 0.9);
+  --color-008: rgba(0, 0, 0, 0.03);
+  --color-009: rgb(231, 137, 171);
+  --color-010: rgb(0, 0, 0);
+  --color-011: rgb(160, 14, 67);
+  --color-012: rgb(23, 162, 184);
+  --color-013: rgba(0, 0, 0, 0.3);
+}
+
+:root {
+  /* fonts */
+  --font-body: Lato, "Odoo Unicode Support Noto", sans-serif;
+  --font-001: "Work Sans", "Odoo Unicode Support Noto", sans-serif;
+  --font-002: FontAwesome;
+  /* fontSizes */
+  --font-size-001: 12px;
+  --font-size-002: 14px;
+  --font-size-003: 16px;
+  --font-size-004: 21px;
+  --font-size-005: 24px;
+  --font-size-006: 34.6667px;
+  --font-size-007: 36px;
+  --font-size-008: 62px;
+  /* fontWeights */
+  --font-weight-001: 400;
+  --font-weight-002: 600;
+  --font-weight-003: 700;
+  /* lineHeights */
+  --line-height-001: 24px;
+  --line-height-002: 43.2px;
+  --line-height-003: 25.2px;
+  --line-height-004: 74.4px;
+  --line-height-005: 16px;
+  --line-height-006: 21px;
+  --line-height-007: 28.8px;
+  --line-height-008: 28px;
+  --line-height-009: 52px;
+  /* spacing */
+  --space-001: 3.2px;
+  --space-002: 4px;
+  --space-003: 7.2px;
+  --space-004: 8px;
+  --space-005: 15px;
+  --space-006: 16px;
+  --space-007: 21.6px;
+  --space-008: 24px;
+  --space-009: 32px;
+  --space-010: 40px;
+  --space-011: 120px;
+  /* radii */
+  --radius-001: 6.4px;
+  --radius-002: 100px;
+  /* shadows */
+  --shadow-001: rgba(0, 0, 0, 0.12) 0px 4px 16px 0px;
+  /* breakpoints */
+  --bp-375: 375px;
+  --bp-768: 768px;
+  --bp-1280: 1280px;
+  --bp-1920: 1920px;
+}
+
+:root {
+  --clr-0: color(srgb 0.129412 0.145098 0.160784 / 0.15);
+  --clr-1: color(srgb 1 1 1 / 0.15);
+  --clr-2: color(srgb 0.682353 0.0588235 0.282353 / 0.15);
+  --clr-3: rgb(215, 140, 198);
+  --clr-4: rgba(207, 18, 86, 0.25);
+  --clr-5: rgb(206, 212, 218);
+}
+
+
+/* page base */
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+html, body { overflow-x: clip; }
+
+/* nodes */
+.cn0{display:block;position:relative;overflow-x:visible;overflow-y:visible;color:var(--foreground);font-family:Lato, "Odoo Unicode Support Noto", sans-serif;font-size:16px;font-weight:400;font-style:normal;line-height:24px;letter-spacing:normal;word-spacing:0px;text-align:start;text-transform:none;white-space:normal;word-break:normal;overflow-wrap:normal;text-indent:0px;text-shadow:none;font-variant-caps:normal;font-feature-settings:normal;list-style-position:outside;writing-mode:horizontal-tb;direction:ltr;background-color:var(--background)}
+.cn1{height:100%;display:flex;position:relative;top:0px;right:0px;bottom:0px;left:0px;z-index:0;flex-direction:column;overflow-x:auto;overflow-y:auto}
+.cn2{display:block;z-index:1030;flex-shrink:0}
+.cn3{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;justify-content:flex-start;align-items:center;background-color:var(--background);box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 3px 0px}
+.cn4{display:block}
+.cn5{border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:var(--color-006);display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;z-index:1;background-color:var(--border)}
+.cn6{height:40.375px;display:flex;max-width:1140px;margin-right:auto;margin-left:auto;padding-right:15px;padding-left:15px;justify-content:space-between;row-gap:16px;column-gap:16px}
+.cn7{height:40.375px;display:flex;padding-top:4px;padding-bottom:4px;align-items:center;row-gap:16px;column-gap:16px;list-style-type:none;list-style-position:outside}
+.cn8{width:558.359px;height:28px;display:list-item;flex-grow:1;flex-shrink:0;flex-basis:0px}
+.cn9{height:28px;display:flex;align-items:center;row-gap:24px;column-gap:24px;margin-left:auto;margin-right:auto}
+.cn10{height:28px;display:flex;align-items:center;font-size:14px;line-height:21px}
+.cn11{width:28px;height:28px;display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;margin-right:4px;vertical-align:middle;font-family:FontAwesome;line-height:28px;text-align:center}
+.cn11::before{content:"";color:rgb(33, 37, 41);font-size:14px;line-height:28px;text-align:center}
+.cn12{height:28px;display:flex;align-items:center;font-size:14px;line-height:21px}
+.cn13{width:28px;height:28px;display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;margin-right:4px;vertical-align:middle;font-family:FontAwesome;line-height:28px;text-align:center}
+.cn13::before{content:"";color:rgb(33, 37, 41);font-size:14px;line-height:28px;text-align:center}
+.cn14{height:28px;display:flex;align-items:center;font-size:14px;line-height:21px}
+.cn15{width:28px;height:28px;display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;margin-right:4px;vertical-align:middle;font-family:FontAwesome;line-height:28px;text-align:center}
+.cn15::before{content:"";color:rgb(33, 37, 41);font-size:14px;line-height:28px;text-align:center}
+.cn16{display:flex;list-style-type:none;list-style-position:outside}
+.cn17{display:list-item}
+.cn18{height:40.375px;display:block;z-index:0}
+.cn19{display:flex;position:relative;top:0px;right:0px;bottom:0px;left:0px;align-items:stretch}
+.cn20{width:205px;height:40px;display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;min-width:0px;padding-top:6px;padding-right:23px;padding-bottom:6px;padding-left:12px;border-top-left-radius:6.4px;border-bottom-left-radius:6.4px;flex-grow:1;overflow-x:clip;overflow-y:clip;background-color:var(--border);background-clip:padding-box;-webkit-background-clip:padding-box;cursor:text}
+.cn20::placeholder{color:rgb(144, 146, 148)}
+.cn21{height:40.375px;border-width:1px;border-style:solid;border-color:var(--border);display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;z-index:2;margin-left:-1px;padding-top:7.2px;padding-right:21.6px;padding-bottom:7.2px;padding-left:21.6px;border-top-right-radius:6.4px;border-bottom-right-radius:6.4px;vertical-align:middle;text-align:center;white-space:nowrap;text-wrap:nowrap;background-color:var(--border);cursor:pointer}
+.cn22{display:inline-block;font-family:odoo_ui_icons;line-height:16px}
+.cn22::before{content:"";color:rgb(33, 37, 41);font-size:16px;line-height:16px;text-align:center}
+.cn23{display:block}
+.cn24{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px}
+.cn25{height:40.375px;display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;max-width:1140px}
+.cn26{height:40.375px;border-width:1px;border-style:solid;border-color:var(--accent);display:flex;padding-top:7.2px;padding-right:21.6px;padding-bottom:7.2px;padding-left:21.6px;align-items:center;vertical-align:middle;color:var(--background);text-align:center;white-space:nowrap;text-wrap:nowrap;background-color:var(--accent);cursor:pointer}
+.cn27{height:90px;display:flex;max-width:1140px;margin-right:auto;margin-left:auto;padding-top:8px;padding-right:15px;padding-bottom:8px;padding-left:15px;align-items:center}
+.cn28{height:52px;display:block;max-width:75%;margin-right:24px;flex-shrink:0;color:var(--color-002);font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;font-size:34.6667px;line-height:52px;white-space:nowrap;text-wrap:nowrap;cursor:pointer}
+.cn29{display:inline}
+.cn30{width:100%;height:52px;display:block;max-width:100%;overflow-x:clip;overflow-y:clip;object-fit:contain;aspect-ratio:auto 95 / 40;vertical-align:middle}
+.cn31{height:74px;display:block;margin-left:391.375px}
+.cn32{width:596.703px;display:flex;justify-content:flex-end;align-items:center;row-gap:8px;column-gap:8px;list-style-type:none;list-style-position:outside}
+.cn33{display:list-item;position:relative;top:0px;right:0px;bottom:0px;left:0px}
+.cn34{display:block;padding-top:8px;padding-right:8px;padding-bottom:8px;padding-left:8px;border-top-left-radius:160px;border-top-right-radius:160px;border-bottom-right-radius:160px;border-bottom-left-radius:160px;color:var(--color-001);font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;font-size:12px;font-weight:600;line-height:18px;text-transform:uppercase;white-space:nowrap;text-wrap:nowrap;cursor:pointer}
+.cn35{height:40px;display:flex;justify-content:flex-end;list-style-type:none;list-style-position:outside}
+.cn36{display:list-item}
+.cn37{height:40px;display:block;padding-top:8px;padding-right:8px;padding-bottom:8px;padding-left:8px;color:var(--color-007);font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;white-space:nowrap;text-wrap:nowrap;cursor:pointer}
+.cn38{display:inline}
+.cn39{display:list-item}
+.cn40{height:40px;display:block;padding-top:8px;padding-right:8px;padding-bottom:8px;padding-left:8px;color:var(--color-001);font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;white-space:nowrap;text-wrap:nowrap;cursor:pointer}
+.cn41{display:inline}
+.cn42{display:list-item;position:relative;top:0px;right:0px;bottom:0px;left:0px}
+.cn43{height:40px;display:block;padding-top:8px;padding-right:8px;padding-bottom:8px;padding-left:8px;color:var(--color-001);font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;white-space:nowrap;text-wrap:nowrap;cursor:pointer}
+.cn43::after{content:"";display:inline-block;width:8px;height:4px;margin-left:4.08px}
+.cn44{display:inline}
+.cn45{height:40px;display:list-item;position:relative;top:0px;right:0px;bottom:0px;left:0px}
+.cn46{height:40px;display:block;padding-top:8px;padding-right:8px;padding-bottom:8px;padding-left:8px;color:var(--color-001);font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;white-space:nowrap;text-wrap:nowrap;cursor:pointer}
+.cn46::after{content:"";display:inline-block;width:8px;height:4px;margin-left:4.08px}
+.cn47{display:inline}
+.cn48{display:list-item}
+.cn49{height:40px;display:block;padding-top:8px;padding-right:8px;padding-bottom:8px;padding-left:8px;color:var(--color-001);font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;white-space:nowrap;text-wrap:nowrap;cursor:pointer}
+.cn50{display:inline}
+.cn51{display:list-item}
+.cn52{height:40px;display:block;padding-top:8px;padding-right:8px;padding-bottom:8px;padding-left:8px;color:var(--color-001);font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;white-space:nowrap;text-wrap:nowrap;cursor:pointer}
+.cn53{display:inline}
+.cn54{display:list-item}
+.cn55{height:40px;display:block;padding-top:8px;padding-right:8px;padding-bottom:8px;padding-left:8px;color:var(--color-001);font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;white-space:nowrap;text-wrap:nowrap;cursor:pointer}
+.cn56{display:inline}
+.cn57{display:none;position:relative;padding-top:8px;padding-bottom:8px;flex-wrap:wrap;justify-content:space-between;align-items:center;background-color:var(--background);box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 3px 0px}
+.cn58{display:flex;max-width:1140px;padding-right:15px;padding-left:15px;flex-wrap:wrap;justify-content:space-between;align-items:center}
+.cn59{display:block;min-width:0px;max-width:75%;margin-right:16px;flex-shrink:0;color:var(--color-002);font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;font-size:34.6667px;line-height:52px;white-space:nowrap;text-wrap:nowrap;cursor:pointer}
+.cn60{display:inline}
+.cn61{width:100%;height:52px;display:block;max-width:100%;overflow-x:clip;overflow-y:clip;object-fit:contain;aspect-ratio:auto 95 / 40;vertical-align:middle}
+.cn62{display:flex;min-width:0px;align-items:center;row-gap:8px;column-gap:8px;list-style-type:none;list-style-position:outside}
+.cn63{display:list-item;min-width:0px}
+.cn64{border-width:1px;border-style:solid;border-color:var(--color-008);display:block;padding-top:8px;padding-right:8px;padding-bottom:8px;padding-left:8px;border-top-left-radius:160px;border-top-right-radius:160px;border-bottom-right-radius:160px;border-bottom-left-radius:160px;vertical-align:middle;color:var(--color-001);font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;text-align:center;white-space:nowrap;text-wrap:nowrap;cursor:pointer}
+.cn65{height:24px;display:inline-block;vertical-align:middle;background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");background-size:100%;background-position:50% 50%;background-repeat:no-repeat}
+.cn66{display:block;flex-grow:1;flex-shrink:0}
+.cn67{height:100%;display:block}
+.cn68{height:668.625px;min-height:668.625px;display:flex;position:relative;top:0px;right:0px;bottom:0px;left:0px;padding-top:96px;padding-bottom:96px;flex-direction:column;justify-content:space-around;overflow-x:hidden;overflow-y:hidden;color:var(--background);background-color:var(--color-004)}
+.cn69{height:100%;display:block;position:absolute;top:0px;right:0px;left:0px;min-width:0px;overflow-x:hidden;overflow-y:hidden;background-image:url("public/assets/cloned/images/995292c8c739.jpg");background-size:cover;background-position:50% 0px;background-repeat:no-repeat;background-attachment:fixed;pointer-events:none}
+.cn70{height:100%;display:block;position:absolute;top:0px;right:0px;left:0px;min-width:0px;overflow-x:hidden;overflow-y:hidden;background-color:var(--color-004);background-repeat:no-repeat;pointer-events:none}
+.cn71{height:100%;display:block;position:absolute;top:0px;right:0px;left:0px;min-width:0px;overflow-x:hidden;overflow-y:hidden;background-image:url("public/assets/cloned/svg/bb90d3edfd2e.svg");background-size:100%;background-position:50% 100%;background-repeat:no-repeat;pointer-events:none}
+.cn72{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;max-width:720px;margin-right:280px;margin-left:280px;padding-right:15px;padding-left:15px}
+.cn72::before{content:"";display:table;width:0px;height:0px}
+.cn72::after{content:"";display:table;width:0px;height:0px}
+.cn73{display:block;margin-bottom:8px;font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;font-size:62px;font-weight:700;line-height:74.4px;text-align:center}
+.cn74{display:inline-block;z-index:1;animation-name:o_anim_rotate_in;animation-duration:1s;animation-fill-mode:both}
+.cn75{height:81px;display:block;margin-bottom:16px;font-size:18px;font-weight:300;line-height:27px;text-align:center}
+.cn76{display:inline}
+.cn77{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;padding-top:24px;padding-bottom:64px}
+.cn78{height:100%;display:block;position:absolute;top:0px;right:0px;left:0px;overflow-x:hidden;overflow-y:hidden;background-image:url("public/assets/cloned/svg/8a41911da489.svg");background-size:100%;background-position:50% 100%;background-repeat:no-repeat;pointer-events:none}
+.cn79{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;max-width:1140px;margin-right:70px;margin-left:70px;padding-right:15px;padding-left:15px}
+.cn79::before{content:"";display:table;width:0px;height:0px}
+.cn79::after{content:"";display:table;width:0px;height:0px}
+.cn80{display:flex;margin-right:-15px;margin-left:-15px;flex-wrap:wrap;align-items:center}
+.cn81{width:665px;display:block;max-width:100%;padding-top:16px;padding-right:15px;padding-bottom:16px;padding-left:15px;flex-shrink:0}
+.cn82{width:635px;height:445px;display:block;max-width:100%;margin-right:auto;padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px;overflow-x:clip;overflow-y:clip;vertical-align:middle;margin-left:auto}
+.cn83{width:475px;display:block;max-width:100%;padding-top:16px;padding-right:15px;padding-bottom:16px;padding-left:15px;flex-shrink:0}
+.cn84{display:block;margin-bottom:8px;font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;font-size:44px;font-weight:700;line-height:52.8px}
+.cn85{height:192px;display:block;margin-bottom:16px}
+.cn86{display:inline}
+.cn87{display:inline}
+.cn88{display:inline}
+.cn89{display:inline}
+.cn90{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;padding-top:40px;padding-bottom:40px;color:var(--background);background-color:var(--color-005)}
+.cn91{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;max-width:1140px;margin-right:70px;margin-left:70px;padding-right:15px;padding-left:15px}
+.cn91::before{content:"";display:table;width:0px;height:0px}
+.cn91::after{content:"";display:table;width:0px;height:0px}
+.cn92{display:block;margin-bottom:8px;font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;font-size:62px;font-weight:700;line-height:74.4px;text-align:center}
+.cn93{display:inline}
+.cn94{display:inline;text-decoration-line:underline}
+.cn95{display:inline;color:var(--primary);cursor:pointer}
+.cn96{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;padding-bottom:120px;color:var(--background);background-color:var(--accent)}
+.cn97{height:100%;display:block;position:absolute;top:0px;right:0px;left:0px;overflow-x:hidden;overflow-y:hidden;background-image:url("public/assets/cloned/svg/991d583798c1.svg");background-size:100%;background-position:50% 0%;background-repeat:no-repeat;pointer-events:none}
+.cn98{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;max-width:1140px;margin-right:70px;margin-left:70px;padding-right:15px;padding-left:15px}
+.cn98::before{content:"";display:table;width:0px;height:0px}
+.cn98::after{content:"";display:table;width:0px;height:0px}
+.cn99{display:flex;margin-right:-15px;margin-left:-15px;flex-wrap:wrap}
+.cn100{width:760px;display:block;max-width:100%;padding-top:16px;padding-right:15px;padding-bottom:16px;padding-left:15px;flex-shrink:0}
+.cn101{height:100%;display:flex;border-top-left-radius:6.4px;border-top-right-radius:6.4px;border-bottom-right-radius:6.4px;border-bottom-left-radius:6.4px;flex-direction:row-reverse;flex-wrap:wrap;align-items:center;overflow-x:hidden;overflow-y:hidden;color:var(--foreground);background-color:var(--background);box-shadow:rgba(0, 0, 0, 0.12) 0px 4px 16px 0px}
+.cn102{width:243.328px;display:block;max-width:100%;align-self:stretch;flex-shrink:0}
+.cn103{display:inline;color:var(--color-002);cursor:pointer}
+.cn104{width:100%;height:260px;display:inline;overflow-x:clip;overflow-y:clip;object-fit:cover;vertical-align:middle}
+.cn105{width:486.656px;display:block;max-width:100%;padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px;flex-shrink:0}
+.cn106{display:block;margin-bottom:8px;font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;font-size:36px;font-weight:700;line-height:43.2px}
+.cn107{display:inline;color:var(--accent)}
+.cn108{display:inline;color:var(--color-002);cursor:pointer}
+.cn109{height:48px;display:block;margin-bottom:16px}
+.cn110{display:inline}
+.cn111{display:block;margin-bottom:16px}
+.cn112{border-width:1px;border-style:solid;border-color:var(--accent);display:inline-block;padding-top:7.2px;padding-right:21.6px;padding-bottom:7.2px;padding-left:21.6px;border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-right-radius:100px;border-bottom-left-radius:100px;vertical-align:middle;color:var(--background);text-align:center;background-color:var(--accent);cursor:pointer}
+.cn113{display:inline}
+.cn114{display:inline}
+.cn115{width:760px;display:block;max-width:100%;margin-left:190px;padding-top:24px;padding-right:15px;padding-bottom:24px;padding-left:15px;flex-shrink:0}
+.cn116{height:100%;display:flex;border-top-left-radius:6.4px;border-top-right-radius:6.4px;border-bottom-right-radius:6.4px;border-bottom-left-radius:6.4px;flex-direction:row-reverse;flex-wrap:wrap;align-items:center;overflow-x:hidden;overflow-y:hidden;background-color:var(--color-005);box-shadow:rgba(0, 0, 0, 0.12) 0px 4px 16px 0px}
+.cn117{width:243.328px;display:block;max-width:100%;align-self:stretch;flex-shrink:0}
+.cn118{display:inline;color:var(--primary);cursor:pointer}
+.cn119{width:100%;height:267px;display:inline;overflow-x:clip;overflow-y:clip;object-fit:cover;vertical-align:middle}
+.cn120{width:486.656px;display:block;max-width:100%;padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px;flex-shrink:0}
+.cn121{display:block;margin-bottom:8px;font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;font-size:36px;font-weight:700;line-height:43.2px}
+.cn122{display:inline;color:var(--primary);cursor:pointer}
+.cn123{display:block;margin-bottom:8px;color:var(--background);font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;font-size:36px;font-weight:700;line-height:43.2px}
+.cn124{display:inline;color:var(--accent)}
+.cn125{display:block;margin-bottom:16px}
+.cn126{display:block;margin-bottom:16px}
+.cn127{display:block;margin-bottom:16px}
+.cn128{display:inline;color:var(--primary);cursor:pointer}
+.cn129{display:inline}
+.cn130{display:inline;color:var(--primary);cursor:pointer}
+.cn131{display:inline}
+.cn132{display:block;margin-bottom:16px}
+.cn133{display:block;margin-bottom:16px}
+.cn134{width:855px;display:block;max-width:100%;margin-left:285px;padding-top:16px;padding-right:15px;padding-bottom:16px;padding-left:15px;flex-shrink:0}
+.cn135{height:100%;display:flex;border-top-left-radius:6.4px;border-top-right-radius:6.4px;border-bottom-right-radius:6.4px;border-bottom-left-radius:6.4px;flex-direction:row-reverse;flex-wrap:wrap;align-items:center;overflow-x:hidden;overflow-y:hidden;color:var(--foreground);background-color:var(--background);box-shadow:rgba(0, 0, 0, 0.12) 0px 4px 16px 0px}
+.cn136{width:274.984px;display:block;max-width:100%;align-self:stretch;flex-shrink:0}
+.cn137{display:inline;color:var(--color-002);cursor:pointer}
+.cn138{width:100%;height:236px;display:inline;overflow-x:clip;overflow-y:clip;object-fit:cover;vertical-align:middle}
+.cn139{width:549.984px;display:block;max-width:100%;padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px;flex-shrink:0}
+.cn140{display:block;margin-bottom:8px;font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;font-size:36px;font-weight:700;line-height:43.2px}
+.cn141{display:inline;color:var(--color-002);cursor:pointer}
+.cn142{display:inline;color:var(--accent)}
+.cn143{display:inline}
+.cn144{display:block;margin-bottom:16px}
+.cn145{display:block;margin-bottom:16px}
+.cn146{display:inline}
+.cn147{border-width:1px;border-style:solid;border-color:var(--accent);display:inline-block;padding-top:7.2px;padding-right:21.6px;padding-bottom:7.2px;padding-left:21.6px;border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-right-radius:100px;border-bottom-left-radius:100px;vertical-align:middle;color:var(--background);text-align:center;background-color:var(--accent);cursor:pointer}
+.cn148{display:inline}
+.cn149{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;padding-top:40px;padding-bottom:40px;color:var(--background);background-color:var(--color-005)}
+.cn150{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;max-width:1140px;margin-right:70px;margin-left:70px;padding-right:15px;padding-left:15px}
+.cn150::before{content:"";display:table;width:0px;height:0px}
+.cn150::after{content:"";display:table;width:0px;height:0px}
+.cn151{display:block;margin-bottom:8px;font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;font-size:62px;font-weight:700;line-height:74.4px;text-align:center}
+.cn152{display:inline}
+.cn153{display:inline;text-decoration-line:underline}
+.cn154{display:inline;color:var(--primary);cursor:pointer}
+.cn155{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;padding-bottom:120px;color:var(--background);background-color:var(--accent)}
+.cn156{height:100%;display:block;position:absolute;top:0px;right:0px;left:0px;overflow-x:hidden;overflow-y:hidden;background-image:url("public/assets/cloned/svg/1e94cda9097d.svg");background-size:100%;background-position:50% 0%;background-repeat:no-repeat;pointer-events:none}
+.cn157{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;max-width:1140px;margin-right:70px;margin-left:70px;padding-right:15px;padding-left:15px}
+.cn157::before{content:"";display:table;width:0px;height:0px}
+.cn157::after{content:"";display:table;width:0px;height:0px}
+.cn158{display:flex;margin-right:-15px;margin-left:-15px;flex-wrap:wrap}
+.cn159{width:950px;display:block;max-width:100%;margin-left:285px;padding-top:16px;padding-right:15px;padding-bottom:16px;padding-left:15px;flex-shrink:0}
+.cn160{height:100%;display:flex;border-top-left-radius:6.4px;border-top-right-radius:6.4px;border-bottom-right-radius:6.4px;border-bottom-left-radius:6.4px;flex-direction:row-reverse;flex-wrap:wrap;align-items:center;overflow-x:hidden;overflow-y:hidden;color:var(--foreground);background-color:var(--background);box-shadow:rgba(0, 0, 0, 0.12) 0px 4px 16px 0px}
+.cn161{width:306.656px;height:235.562px;min-height:24px;display:block;max-width:100%;align-self:stretch;flex-shrink:0}
+.cn162{display:inline;color:var(--color-002);cursor:pointer}
+.cn163{width:100%;height:236px;display:inline;overflow-x:clip;overflow-y:clip;object-fit:cover;vertical-align:middle}
+.cn164{width:613.328px;height:235.562px;min-height:24px;display:block;max-width:100%;padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px;flex-shrink:0}
+.cn165{display:block;margin-bottom:8px;font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;font-size:36px;font-weight:700;line-height:43.2px}
+.cn166{display:inline;color:var(--accent)}
+.cn167{display:inline}
+.cn168{display:block;margin-bottom:16px}
+.cn169{display:block;margin-bottom:16px}
+.cn170{border-width:1px;border-style:solid;border-color:var(--accent);display:inline-block;padding-top:7.2px;padding-right:21.6px;padding-bottom:7.2px;padding-left:21.6px;border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-right-radius:100px;border-bottom-left-radius:100px;vertical-align:middle;color:var(--background);text-align:center;background-color:var(--accent);cursor:pointer}
+.cn171{display:inline}
+.cn172{width:760px;display:block;max-width:100%;padding-top:16px;padding-right:15px;padding-bottom:16px;padding-left:15px;flex-shrink:0}
+.cn173{height:100%;display:flex;border-top-left-radius:6.4px;border-top-right-radius:6.4px;border-bottom-right-radius:6.4px;border-bottom-left-radius:6.4px;flex-direction:row-reverse;flex-wrap:wrap;align-items:center;overflow-x:hidden;overflow-y:hidden;color:var(--foreground);background-color:var(--background);box-shadow:rgba(0, 0, 0, 0.12) 0px 4px 16px 0px}
+.cn174{width:243.328px;display:block;max-width:100%;align-self:stretch;flex-shrink:0}
+.cn175{display:inline;color:var(--color-002);cursor:pointer}
+.cn176{width:100%;height:319px;display:inline;overflow-x:clip;overflow-y:clip;object-fit:cover;vertical-align:middle}
+.cn177{width:486.656px;display:block;max-width:100%;padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px;flex-shrink:0}
+.cn178{display:block;margin-bottom:8px;font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;font-size:36px;font-weight:700;line-height:43.2px}
+.cn179{display:inline;color:var(--accent)}
+.cn180{display:inline;color:var(--color-002);cursor:pointer}
+.cn181{display:inline}
+.cn182{display:block;margin-bottom:16px}
+.cn183{display:block;margin-bottom:16px}
+.cn184{border-width:1px;border-style:solid;border-color:var(--accent);display:inline-block;padding-top:7.2px;padding-right:21.6px;padding-bottom:7.2px;padding-left:21.6px;border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-right-radius:100px;border-bottom-left-radius:100px;vertical-align:middle;color:var(--background);text-align:center;background-color:var(--accent);cursor:pointer}
+.cn185{display:inline}
+.cn186{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;padding-top:120px;padding-bottom:240px;background-color:var(--border)}
+.cn187{height:100%;display:block;position:absolute;top:0px;right:0px;left:0px;overflow-x:hidden;overflow-y:hidden;background-image:url("public/assets/cloned/svg/38be1b42ada2.svg");background-size:100% 100%;background-position:50% 50%;background-repeat:no-repeat;pointer-events:none}
+.cn188{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;max-width:1140px;margin-right:70px;margin-left:70px;padding-right:15px;padding-left:15px}
+.cn188::before{content:"";display:table;width:0px;height:0px}
+.cn188::after{content:"";display:table;width:0px;height:0px}
+.cn189{display:block;margin-bottom:16px;text-align:center}
+.cn190{display:flex;margin-right:-15px;margin-left:-15px;flex-wrap:wrap;justify-content:center}
+.cn191{width:380px;display:block;max-width:100%;padding-top:16px;padding-right:15px;padding-bottom:16px;padding-left:15px;flex-shrink:0}
+.cn192{width:380px;display:block;max-width:100%;padding-top:16px;padding-right:15px;padding-bottom:16px;padding-left:15px;flex-shrink:0}
+.cn193{width:350px;height:110px;display:block;max-width:100%;margin-right:auto;margin-left:auto;overflow-x:clip;overflow-y:clip;vertical-align:middle}
+.cn194{width:380px;display:block;max-width:100%;padding-top:16px;padding-right:15px;padding-bottom:16px;padding-left:15px;flex-shrink:0}
+.cn195{display:block;flex-shrink:0;color:var(--background);background-color:var(--color-004)}
+.cn196{display:block}
+.cn197{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;padding-top:32px;padding-bottom:16px}
+.cn198{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;max-width:1140px;margin-right:70px;margin-left:70px;padding-right:15px;padding-left:15px}
+.cn199{display:flex;margin-right:-15px;margin-left:-15px;flex-wrap:wrap;align-items:flex-end}
+.cn200{width:285px;height:129.594px;min-height:24px;display:block;max-width:100%;padding-top:16px;padding-right:15px;padding-bottom:16px;padding-left:15px;flex-shrink:0}
+.cn201{height:24px;display:block;margin-bottom:8px}
+.cn202{display:inline}
+.cn203{display:inline}
+.cn204{display:inline}
+.cn205{display:block;margin-bottom:8px;font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;font-size:24px;font-weight:700;line-height:28.8px}
+.cn206{display:inline}
+.cn207{display:inline}
+.cn208{width:285px;height:130.375px;min-height:24px;display:block;max-width:100%;padding-top:16px;padding-right:15px;padding-bottom:16px;padding-left:15px;flex-shrink:0}
+.cn209{display:block;margin-bottom:8px}
+.cn210{display:inline}
+.cn211{display:inline}
+.cn212{display:block;margin-bottom:8px;font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;font-size:21px;font-weight:700;line-height:25.2px}
+.cn213{display:inline}
+.cn214{display:inline;color:var(--primary);cursor:pointer}
+.cn215{display:inline}
+.cn216{display:inline}
+.cn217{display:block;margin-bottom:8px;font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;font-size:21px;font-weight:700;line-height:25.2px}
+.cn218{display:inline;color:var(--primary);cursor:pointer}
+.cn219{display:inline}
+.cn220{display:inline}
+.cn221{display:inline}
+.cn222{width:285px;height:97.1875px;min-height:24px;display:block;max-width:100%;padding-top:16px;padding-right:15px;padding-bottom:16px;padding-left:15px;flex-shrink:0}
+.cn223{height:24px;display:block;margin-bottom:8px}
+.cn224{display:inline}
+.cn225{display:inline}
+.cn226{display:inline}
+.cn227{display:block;margin-bottom:8px;font-family:"Work Sans", "Odoo Unicode Support Noto", sans-serif;font-size:21px;font-weight:700;line-height:25.2px}
+.cn228{display:inline;color:var(--primary);cursor:pointer}
+.cn229{display:inline}
+.cn230{display:inline}
+.cn231{width:285px;height:97.2969px;min-height:24px;display:block;max-width:100%;padding-top:16px;padding-right:15px;padding-bottom:16px;padding-left:15px;flex-shrink:0}
+.cn232{display:block;text-align:right}
+.cn233{display:block;margin-right:6.4px;margin-bottom:8px;vertical-align:middle}
+.cn234{display:inline;vertical-align:middle}
+.cn235{display:inline;vertical-align:middle}
+.cn236{height:24px;display:inline-block;margin-top:3.2px;margin-right:3.2px;margin-bottom:3.2px;margin-left:3.2px;vertical-align:middle;color:var(--primary);cursor:pointer}
+.cn237{display:flex;margin-top:4px;margin-right:4px;margin-bottom:4px;margin-left:4px;justify-content:center;align-items:center;font-family:FontAwesome-twitter-x-only;line-height:16px}
+.cn237::before{content:"";display:block;width:16px;height:16px;color:rgb(209, 247, 243);font-size:16px;line-height:16px;text-align:right}
+.cn238{height:24px;display:inline-block;margin-top:3.2px;margin-right:3.2px;margin-bottom:3.2px;margin-left:3.2px;vertical-align:middle;color:var(--primary);cursor:pointer}
+.cn239{display:flex;margin-top:4px;margin-right:4px;margin-bottom:4px;margin-left:4px;justify-content:center;align-items:center;font-family:FontAwesome;line-height:16px}
+.cn239::before{content:"";display:block;width:13.7188px;height:16px;color:rgb(209, 247, 243);font-size:16px;line-height:16px;text-align:right}
+.cn240{height:24px;display:inline-block;margin-top:3.2px;margin-right:3.2px;margin-bottom:3.2px;margin-left:3.2px;vertical-align:middle;color:var(--primary);cursor:pointer}
+.cn241{display:flex;margin-top:4px;margin-right:4px;margin-bottom:4px;margin-left:4px;justify-content:center;align-items:center;font-family:FontAwesome;line-height:16px}
+.cn241::before{content:"";display:block;width:13.7188px;height:16px;color:rgb(209, 247, 243);font-size:16px;line-height:16px;text-align:right}
+.cn242{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px}
+.cn243{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;max-width:1140px;margin-right:70px;margin-left:70px;padding-right:15px;padding-left:15px}
+.cn244{display:block;padding-top:16px;padding-bottom:16px;line-height:0px}
+.cn245{width:1110px;height:1px;border-top-width:1px;border-top-style:solid;border-top-color:var(--muted-foreground);display:block;overflow-x:hidden;overflow-y:hidden;margin-left:auto;margin-right:auto}
+.cn246{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px}
+.cn247{display:block;position:relative;top:0px;right:0px;bottom:0px;left:0px;max-width:1140px;margin-right:70px;margin-left:70px;padding-right:15px;padding-left:15px}
+.cn248{display:flex;margin-right:-15px;margin-left:-15px;flex-wrap:wrap;align-items:center}
+.cn249{width:190px;height:40px;min-height:24px;display:block;max-width:100%;padding-right:15px;padding-bottom:16px;padding-left:15px;flex-shrink:0}
+.cn250{display:inline;color:var(--primary);cursor:pointer}
+.cn251{width:0px;height:1px;min-height:1px;display:inline;max-width:100%;overflow-x:clip;overflow-y:clip;vertical-align:middle}
+.cn252{width:950px;height:40px;min-height:24px;display:block;max-width:100%;padding-right:15px;padding-bottom:16px;padding-left:15px;flex-shrink:0;text-align:right}
+.cn253{height:100%;display:block;list-style-type:none;list-style-position:outside}
+.cn254{display:inline-block;margin-right:8px}
+.cn255{display:inline;color:var(--primary);cursor:pointer}
+.cn256{display:inline}
+.cn257{display:inline}
+.cn258{display:inline-block;margin-right:8px}
+.cn259{display:inline}
+.cn260{display:inline}
+.cn261{display:inline-block;margin-right:8px}
+.cn262{display:inline;color:var(--primary);cursor:pointer}
+.cn263{display:inline}
+.cn264{display:inline}
+.cn265{display:inline-block;margin-right:8px}
+.cn266{display:inline}
+.cn267{display:inline}
+.cn268{display:inline-block;margin-right:8px}
+.cn269{display:inline;color:var(--primary);cursor:pointer}
+.cn270{display:inline}
+.cn271{display:inline}
+.cn272{display:inline-block;margin-right:8px}
+.cn273{display:inline}
+.cn274{display:inline}
+.cn275{height:24px;display:inline-block;margin-right:8px}
+.cn276{display:inline;color:var(--primary);cursor:pointer}
+.cn277{display:inline}
+.cn278{display:inline}
+.cn279{display:inline-block;margin-right:8px}
+.cn280{display:inline}
+.cn281{display:inline}
+.cn282{height:24px;display:inline-block}
+.cn283{display:inline;color:var(--primary);cursor:pointer}
+.cn284{display:inline}
+.cn285{display:inline}
+.cn286{display:block;background-color:var(--color-005)}
+.cn287{display:block;max-width:1140px;margin-right:70px;margin-left:70px;padding-top:16px;padding-right:15px;padding-bottom:16px;padding-left:15px}
+.cn288{display:flex;margin-right:-15px;margin-left:-15px;flex-wrap:wrap}
+.cn289{width:100%;height:65.9531px;display:block;max-width:100%;padding-right:15px;padding-left:15px;flex-grow:1;flex-shrink:0;flex-basis:0%;color:var(--color-003);text-align:left}
+.cn290{display:inline;vertical-align:middle}
+.cn291{display:block;margin-bottom:16px}
+.cn292{display:inline;color:var(--primary);cursor:pointer}
+.cn293{width:570px;display:block;max-width:100%;margin-top:20.9688px;margin-bottom:20.9688px;padding-right:15px;padding-left:15px;flex-grow:1;flex-shrink:0;flex-basis:0%;text-align:right}
+.cn294{height:100%;display:block}
+.cn295{display:inline-block;padding-top:3px;padding-right:4.8px;padding-bottom:3px;padding-left:4.8px;border-top-left-radius:6.4px;border-top-right-radius:6.4px;border-bottom-right-radius:6.4px;border-bottom-left-radius:6.4px;color:var(--foreground);font-size:12px;font-weight:600;line-height:12px;text-align:center;white-space:nowrap;text-wrap:nowrap;background-color:var(--border);cursor:pointer}
+.cn296{width:37px;height:12px;min-height:1px;display:inline;overflow-x:clip;overflow-y:clip;aspect-ratio:auto 62 / 20}
+.cn297{display:inline;color:var(--primary);cursor:pointer}
+.cn298{display:block;flex-shrink:0}
+.cn299{display:block}
+.cn300{display:block}
+.cn301{display:block}
+.cn302{width:312px;height:0px;display:block;position:absolute;top:52.9px;left:960px;z-index:1055}
+.cn303{width:312px;height:0px;display:block;position:absolute;top:52.9px;left:960px;z-index:1055}
+
+@media (max-width: 571px) {
+.cn3{display:none}
+.cn43::after{width:auto;height:auto}
+.cn46::after{width:auto;height:auto}
+.cn57{display:block;top:0px;right:0px;bottom:0px;left:0px}
+.cn58{max-width:none}
+.cn59{height:52px;min-width:0}
+.cn61{max-height:52px}
+.cn62{min-width:0}
+.cn63{min-width:0}
+.cn68{height:744px;min-height:744px}
+.cn69{background-attachment:initial}
+.cn71{display:none}
+.cn72{max-width:none;margin-right:0;margin-left:0}
+.cn73{font-size:36.0125px;line-height:43.215px}
+.cn75{height:135px}
+.cn78{display:none}
+.cn79{max-width:none;margin-right:0;margin-left:0}
+.cn81{width:375px}
+.cn82{width:345px;height:251px}
+.cn83{width:375px}
+.cn84{font-size:29.15px;line-height:34.98px}
+.cn85{height:264px}
+.cn91{max-width:none;margin-right:0;margin-left:0}
+.cn92{font-size:36.0125px;line-height:43.215px}
+.cn93{font-size:62px;line-height:74.4px}
+.cn97{display:none}
+.cn98{max-width:none;margin-right:0;margin-left:0}
+.cn100{width:375px}
+.cn102{width:345px}
+.cn104{height:230px}
+.cn105{width:345px}
+.cn106{font-size:26.1px;line-height:31.32px}
+.cn109{height:72px}
+.cn115{width:375px;margin-left:0}
+.cn117{width:345px}
+.cn119{height:230px}
+.cn120{width:345px}
+.cn121{font-size:26.1px;line-height:31.32px}
+.cn123{font-size:26.1px;line-height:31.32px}
+.cn134{width:375px;margin-left:0}
+.cn136{width:345px}
+.cn138{height:230px}
+.cn139{width:345px}
+.cn140{font-size:26.1px;line-height:31.32px}
+.cn150{max-width:none;margin-right:0;margin-left:0}
+.cn151{font-size:36.0125px;line-height:43.215px}
+.cn152{font-size:62px;line-height:74.4px}
+.cn156{display:none}
+.cn157{max-width:none;margin-right:0;margin-left:0}
+.cn159{width:375px;margin-left:0}
+.cn161{width:345px;height:230px}
+.cn163{height:230px}
+.cn164{width:345px;height:303px}
+.cn165{font-size:26.1px;line-height:31.32px}
+.cn172{width:375px}
+.cn174{width:345px}
+.cn176{height:452px}
+.cn177{width:345px}
+.cn178{font-size:26.1px;line-height:31.32px}
+.cn187{display:none}
+.cn188{max-width:none;margin-right:0;margin-left:0}
+.cn190{justify-content:initial}
+.cn191{width:375px}
+.cn192{width:375px}
+.cn193{width:345px;height:109px}
+.cn194{width:375px}
+.cn198{max-width:none;margin-right:0;margin-left:0}
+.cn200{width:375px;height:123.656px}
+.cn205{font-size:21.525px;line-height:25.83px}
+.cn208{width:375px;height:128.875px}
+.cn212{font-size:20.3813px;line-height:24.4575px}
+.cn217{font-size:20.3813px;line-height:24.4575px}
+.cn222{width:375px;height:96.4375px}
+.cn227{font-size:20.3813px;line-height:24.4575px}
+.cn231{width:375px}
+.cn243{max-width:none;margin-right:0;margin-left:0}
+.cn245{width:345px}
+.cn247{max-width:none;margin-right:0;margin-left:0}
+.cn249{width:375px}
+.cn252{width:375px;height:64px}
+.cn287{max-width:none;margin-right:0;margin-left:0}
+.cn289{text-align:center;flex-grow:initial;flex-basis:initial}
+.cn293{width:375px;text-align:center;margin-top:0;margin-bottom:0;flex-grow:initial;flex-basis:initial}
+.cn295{text-align:inherit}
+.cn302{left:55px}
+.cn303{left:55px}
+}
+
+@media (min-width: 572px) and (max-width: 1024px) {
+.cn3{display:none}
+.cn43::after{width:auto;height:auto}
+.cn46::after{width:auto;height:auto}
+.cn57{display:block;top:0px;right:0px;bottom:0px;left:0px}
+.cn58{max-width:720px;margin-right:24px;margin-left:24px}
+.cn59{height:52px;min-width:0}
+.cn62{min-width:0}
+.cn63{min-width:0}
+.cn68{height:956px;min-height:956px}
+.cn69{background-attachment:initial}
+.cn72{margin-right:24px;margin-left:24px}
+.cn73{font-size:48.392px;line-height:58.0704px}
+.cn79{max-width:720px;margin-right:24px;margin-left:24px}
+.cn81{width:720px}
+.cn82{width:690px;height:481px}
+.cn83{width:720px}
+.cn84{font-size:36.224px;line-height:43.4688px}
+.cn85{height:168px}
+.cn91{max-width:720px;margin-right:24px;margin-left:24px}
+.cn92{font-size:48.392px;line-height:58.0704px}
+.cn93{font-size:62px;line-height:74.4px}
+.cn98{max-width:720px;margin-right:24px;margin-left:24px}
+.cn100{width:720px}
+.cn102{width:690px}
+.cn104{height:460px}
+.cn105{width:690px}
+.cn106{font-size:30.816px;line-height:36.9792px}
+.cn109{height:24px}
+.cn115{width:720px;margin-left:0}
+.cn117{width:690px}
+.cn119{height:461px}
+.cn120{width:690px}
+.cn121{font-size:30.816px;line-height:36.9792px}
+.cn123{font-size:30.816px;line-height:36.9792px}
+.cn134{width:720px;margin-left:0}
+.cn136{width:690px}
+.cn138{height:460px}
+.cn139{width:690px}
+.cn140{font-size:30.816px;line-height:36.9792px}
+.cn150{max-width:720px;margin-right:24px;margin-left:24px}
+.cn151{font-size:48.392px;line-height:58.0704px}
+.cn152{font-size:62px;line-height:74.4px}
+.cn157{max-width:720px;margin-right:24px;margin-left:24px}
+.cn159{width:720px;margin-left:0}
+.cn161{width:690px;height:460px}
+.cn163{height:460px}
+.cn164{width:690px;height:229.344px}
+.cn165{font-size:30.816px;line-height:36.9792px}
+.cn172{width:720px}
+.cn174{width:690px}
+.cn176{height:904px}
+.cn177{width:690px}
+.cn178{font-size:30.816px;line-height:36.9792px}
+.cn188{max-width:720px;margin-right:24px;margin-left:24px}
+.cn191{width:720px}
+.cn192{width:720px}
+.cn193{width:621px;height:196px}
+.cn194{width:720px}
+.cn198{max-width:720px;margin-right:24px;margin-left:24px}
+.cn200{width:720px;height:99.2344px}
+.cn205{font-size:22.704px;line-height:27.2448px}
+.cn208{width:720px;height:129.594px}
+.cn212{font-size:20.676px;line-height:24.8112px}
+.cn217{font-size:20.676px;line-height:24.8112px}
+.cn222{width:720px;height:96.7969px}
+.cn227{font-size:20.676px;line-height:24.8112px}
+.cn231{width:720px}
+.cn243{max-width:720px;margin-right:24px;margin-left:24px}
+.cn245{width:690px}
+.cn247{max-width:720px;margin-right:24px;margin-left:24px}
+.cn249{width:720px}
+.cn252{width:720px}
+.cn287{max-width:720px;margin-right:24px;margin-left:24px}
+.cn293{width:360px;margin-top:8.96875px;margin-bottom:8.96875px}
+.cn302{left:448px}
+.cn303{left:448px}
+}
+
+@media (min-width: 1601px) {
+.cn6{max-width:1320px}
+.cn25{max-width:1320px}
+.cn27{max-width:1320px}
+.cn31{margin-left:571.375px}
+.cn68{height:948.625px;min-height:948.625px}
+.cn72{margin-right:600px;margin-left:600px}
+.cn79{max-width:1320px;margin-right:300px;margin-left:300px}
+.cn81{width:770px}
+.cn82{width:740px;height:515px}
+.cn83{width:550px}
+.cn91{max-width:1320px;margin-right:300px;margin-left:300px}
+.cn98{max-width:1320px;margin-right:300px;margin-left:300px}
+.cn100{width:880px}
+.cn102{width:283.328px}
+.cn105{width:566.656px}
+.cn115{width:880px;margin-left:220px}
+.cn117{width:283.328px}
+.cn120{width:566.656px}
+.cn134{width:990px;margin-left:330px}
+.cn136{width:319.984px}
+.cn139{width:639.984px}
+.cn150{max-width:1320px;margin-right:300px;margin-left:300px}
+.cn157{max-width:1320px;margin-right:300px;margin-left:300px}
+.cn159{width:1100px;margin-left:330px}
+.cn161{width:356.656px;height:237.766px}
+.cn163{height:238px}
+.cn164{width:713.328px}
+.cn172{width:880px}
+.cn174{width:283.328px}
+.cn176{height:371px}
+.cn177{width:566.656px}
+.cn188{max-width:1320px;margin-right:300px;margin-left:300px}
+.cn191{width:440px}
+.cn192{width:440px}
+.cn193{width:410px;height:129px}
+.cn194{width:440px}
+.cn198{max-width:1320px;margin-right:300px;margin-left:300px}
+.cn200{width:330px}
+.cn208{width:330px}
+.cn222{width:330px}
+.cn231{width:330px}
+.cn243{max-width:1320px;margin-right:300px;margin-left:300px}
+.cn245{width:1290px}
+.cn247{max-width:1320px;margin-right:300px;margin-left:300px}
+.cn249{width:220px}
+.cn252{width:1100px}
+.cn287{max-width:1320px;margin-right:300px;margin-left:300px}
+.cn293{width:660px}
+.cn302{left:1600px}
+.cn303{left:1600px}
+}
+
+</style>
+</head>
+<body class="cn0">
+    <div class="cn1" id="wrapwrap">
+      <header class="cn2" id="top">
+        <nav class="cn3" aria-label="Hoofd">
+          <div class="cn4" id="o_main_nav">
+            <div class="cn5" aria-label="Boven">
+              <div class="cn6">
+                <ul class="cn7">
+                  <li class="cn8">
+                    <div class="cn9">
+                      <small class="cn10">
+                        <i class="cn11"></i>
+                        Lageprijsgarantie
+                      </small>
+                       
+                      <small class="cn12">
+                        <i class="cn13"></i>
+                        30 dagen online retourneren
+                      </small>
+                       
+                      <small class="cn14">
+                        <i class="cn15"></i>
+                        Standaard verzending
+                      </small>
+                       
+                    </div>
+                     
+                  </li>
+                </ul>
+                 
+                <div class="cn16">
+                  <li class="cn17">
+                    <form class="cn18">
+                      <div class="cn19" role="search">
+                        <input class="cn20" data-ditto-id="style-input" name="search" placeholder="Zoeken..." type="search" />
+                         
+                        <button class="cn21" data-ditto-id="style-zoeken" aria-label="Zoeken" title="Zoeken" type="submit">
+                          <i class="cn22"></i>
+                           
+                        </button>
+                         
+                      </div>
+                       
+                    </form>
+                     
+                  </li>
+                   
+                  <div class="cn23">
+                    <section class="cn24">
+                      <div class="cn25">
+                        <a class="cn26" data-ditto-id="style-button" href="https://www.ahneta.nl/contactus">
+                          Contact
+                        </a>
+                         
+                      </div>
+                       
+                    </section>
+                     
+                  </div>
+                   
+                </div>
+                 
+              </div>
+               
+            </div>
+             
+            <div class="cn27" aria-label="Onder">
+              <a class="cn28" data-ditto-id="style-link" href="https://www.ahneta.nl/">
+                 
+                <span class="cn29" aria-label="Logo of Ahneta Advies" role="img" title="Ahneta Advies">
+                  <img class="cn30" alt="Ahneta Advies" height="40" src="public/assets/cloned/images/f0163c3f57fb.png" width="95" />
+                </span>
+                 
+              </a>
+               
+              <div class="cn31">
+                <ul class="cn32">
+                  <li class="cn33">
+                    <a class="cn34" data-ditto-id="style-link-2" href="https://www.ahneta.nl/web/login">
+                      Aanmelden
+                    </a>
+                     
+                  </li>
+                </ul>
+                 
+                <ul class="cn35" id="top_menu" role="menu">
+                  <li class="cn36" role="presentation">
+                    <a class="cn37" data-ditto-id="style-link-3" href="https://www.ahneta.nl/" role="menuitem">
+                       
+                      <span class="cn38" data-ditto-id="style-span">
+                        Home
+                      </span>
+                       
+                    </a>
+                     
+                  </li>
+                  <li class="cn39" role="presentation">
+                    <a class="cn40" data-ditto-id="style-link-4" href="https://www.ahneta.nl/onze-diensten" role="menuitem">
+                       
+                      <span class="cn41" data-ditto-id="style-span-2">
+                        Diensten
+                      </span>
+                       
+                    </a>
+                     
+                  </li>
+                  <li class="cn42" role="presentation">
+                    <a class="cn43" data-ditto-id="style-link-5" href="#" role="menuitem">
+                       
+                      <span class="cn44" data-ditto-id="style-span-3">
+                        Bedrijven
+                      </span>
+                       
+                    </a>
+                     
+                  </li>
+                  <li class="cn45" role="presentation">
+                    <a class="cn46" data-ditto-id="style-link-20" href="#" role="menuitem">
+                       
+                      <span class="cn47" data-ditto-id="style-span-4">
+                        Particulieren
+                      </span>
+                       
+                    </a>
+                     
+                  </li>
+                  <li class="cn48" role="presentation">
+                    <a class="cn49" data-ditto-id="style-9" href="https://www.ahneta.nl/pricing" role="menuitem">
+                       
+                      <span class="cn50" data-ditto-id="style-15">
+                        Prijs
+                      </span>
+                       
+                    </a>
+                     
+                  </li>
+                  <li class="cn51" role="presentation">
+                    <a class="cn52" data-ditto-id="style-10" href="https://www.ahneta.nl/over-ons" role="menuitem">
+                       
+                      <span class="cn53" data-ditto-id="style-16">
+                        Over ons
+                      </span>
+                       
+                    </a>
+                     
+                  </li>
+                  <li class="cn54" role="presentation">
+                    <a class="cn55" data-ditto-id="style-11" href="https://www.ahneta.nl/contactus" role="menuitem">
+                       
+                      <span class="cn56" data-ditto-id="style-17">
+                        Contact
+                      </span>
+                       
+                    </a>
+                     
+                  </li>
+                </ul>
+                 
+              </div>
+               
+            </div>
+             
+          </div>
+           
+        </nav>
+         
+        <nav class="cn57" aria-label="Mobile">
+          <div class="cn58">
+            <a class="cn59" href="https://www.ahneta.nl/">
+               
+              <span class="cn60" aria-label="Logo of Ahneta Advies" role="img" title="Ahneta Advies">
+                <img class="cn61" alt="Ahneta Advies" height="40" src="public/assets/cloned/images/f0163c3f57fb.png" width="95" />
+              </span>
+               
+            </a>
+             
+            <ul class="cn62">
+              <li class="cn63">
+                <button class="cn64" aria-controls="top_menu_collapse_mobile" aria-expanded="false" aria-label="Navigatie aan/uitzetten" type="button">
+                  <span class="cn65"></span>
+                   
+                </button>
+                 
+              </li>
+            </ul>
+             
+          </div>
+           
+        </nav>
+         
+      </header>
+       
+      <main class="cn66">
+        <div class="cn67" id="wrap">
+          <section class="cn68">
+            <span class="cn69"></span>
+             
+            <div class="cn70" data-ditto-id="style-span-8"></div>
+             
+            <div class="cn71" data-ditto-id="style-div-28"></div>
+             
+            <div class="cn72" data-ditto-id="style-div-33">
+              <h1 class="cn73" data-ditto-id="style-heading-6">
+                <span class="cn74" data-ditto-id="style-div-29">
+                  Ahneta Advies
+                </span>
+                 
+              </h1>
+               
+              <p class="cn75" data-ditto-id="style-section-5" aria-describedby="tooltip684660">
+                <br class="cn76" data-ditto-id="style-div-30" />
+                 Ahneta Advies werkt al vele jaren als zelfstandig adviesbureau. Wij zijn belastingadviseurs voor zowel bedrijven (MKB) als ook voor particulieren.
+              </p>
+               
+            </div>
+             
+          </section>
+           
+          <section class="cn77" data-ditto-id="style-p-2">
+            <div class="cn78" data-ditto-id="style-br-4"></div>
+             
+            <div class="cn79" data-ditto-id="style-span-20">
+              <div class="cn80" data-ditto-id="style-span-6">
+                <div class="cn81" data-ditto-id="style-br-5">
+                  <img class="cn82" alt="two men in suit sitting on sofa" aria-describedby="tooltip411114" src="public/assets/cloned/images/457b551bddc0.jpg" />
+                   
+                </div>
+                 
+                <div class="cn83">
+                  <h2 class="cn84" data-ditto-id="style-span-5">
+                    Bewust persoonlijk
+                  </h2>
+                   
+                  <p class="cn85" data-ditto-id="style-u">
+                     Ahneta is geen groot bedrijf en dat is een bewuste keuze!
+                    <br class="cn86" data-ditto-id="style-br-10" />
+                    <br class="cn87" data-ditto-id="style-br-3" />
+                    Wij kunnen op deze manier voldoende tijd voor u vrij maken en kunnen wij u beter van dienst zijn met een persoonlijk advies.
+                    <br class="cn88" data-ditto-id="style-span-7" />
+                    <br class="cn89" data-ditto-id="style-br-15" />
+                    Deze keuze heeft ook positieve gevolgen wij hebben hierdoor weinig overheadkosten waardoor wij de tarieven van onze dienstverlening aantrekkelijk kunnen houden.
+                  </p>
+                   
+                </div>
+                 
+              </div>
+               
+            </div>
+             
+          </section>
+           
+          <section class="cn90" data-ditto-id="style-br-7">
+            <div class="cn91" data-ditto-id="style-span-10">
+              <h1 class="cn92">
+                <font class="cn93">
+                   
+                  <u class="cn94">
+                     
+                    <a class="cn95" data-ditto-id="style-br-2" href="https://www.ahneta.nl/bedrijven#top">
+                      Bedrijven
+                    </a>
+                     
+                  </u>
+                   
+                </font>
+                 
+              </h1>
+               
+            </div>
+             
+          </section>
+           
+          <section class="cn96" data-ditto-id="style-br-9">
+            <div class="cn97" data-ditto-id="style-span-9"></div>
+             
+            <div class="cn98" data-ditto-id="style-br-8">
+              <div class="cn99" data-ditto-id="style-br-18">
+                <div class="cn100" data-ditto-id="style-span-15">
+                  <div class="cn101" data-ditto-id="style-br-17">
+                    <div class="cn102" data-ditto-id="style-br-12">
+                      <a class="cn103" data-ditto-id="style-span-13" href="https://www.ahneta.nl/ondernemersplan">
+                         
+                        <img class="cn104" data-ditto-id="style-br" alt="" aria-describedby="tooltip771097" src="public/assets/cloned/images/b0345c2ec162.jpg" />
+                         
+                      </a>
+                       
+                    </div>
+                     
+                    <div class="cn105">
+                      <h3 class="cn106">
+                        <span class="cn107" data-ditto-id="style-br-22">
+                          1.
+                        </span>
+                         
+                        <a class="cn108" data-ditto-id="style-br-13" href="https://www.ahneta.nl/ondernemersplan#top">
+                          Ondernemersplan
+                        </a>
+                         
+                      </h3>
+                       
+                      <p class="cn109" data-ditto-id="style-span-22">
+                         Een ondernemingsplan is het samenspel van u als ondernemer en van Ahneta als adviseur.
+                        <br class="cn110" data-ditto-id="style-br-21" />
+                      </p>
+                       
+                      <p class="cn111">
+                        <a class="cn112" data-ditto-id="style-span-12" href="https://www.ahneta.nl/ondernemersplan">
+                          Lees meer...
+                        </a>
+                         
+                        <br class="cn113" data-ditto-id="style-u-2" />
+                         
+                        <br class="cn114" />
+                         
+                      </p>
+                       
+                    </div>
+                     
+                  </div>
+                   
+                </div>
+                 
+                <div class="cn115" data-ditto-id="style-br-14">
+                  <div class="cn116">
+                    <div class="cn117" data-ditto-id="style-br-16">
+                      <a class="cn118" data-ditto-id="style-br-6" href="https://www.ahneta.nl/administratie#top">
+                         
+                        <img class="cn119" alt="" aria-describedby="tooltip372174" src="public/assets/cloned/images/69a875857b13.jpg" />
+                         
+                      </a>
+                       
+                    </div>
+                     
+                    <div class="cn120" data-ditto-id="style-bottom" aria-describedby="tooltip264557">
+                      <h3 class="cn121" data-ditto-id="style-footer">
+                         
+                      </h3>
+                       
+                      <a class="cn122" data-ditto-id="style-section" aria-describedby="tooltip130468" href="https://www.ahneta.nl/administratie#top">
+                         
+                        <h3 class="cn123" data-ditto-id="style-div-31" aria-describedby="tooltip251966">
+                          <span class="cn124" data-ditto-id="style-div-7">
+                            2.
+                          </span>
+                           Administratie 
+                        </h3>
+                         
+                        <p class="cn125" data-ditto-id="style-div-32" aria-describedby="tooltip276953">
+                           Al vanaf de start van de onderneming heeft Ahneta zich dienstverlenend voor het MKB geprofileerd.
+                        </p>
+                         
+                      </a>
+                       
+                      <p class="cn126" data-ditto-id="style-p-3" aria-describedby="tooltip276953">
+                         
+                      </p>
+                       
+                      <p class="cn127" data-ditto-id="style-font-12" aria-describedby="tooltip648902">
+                        <a class="cn128" data-ditto-id="style-font-9" aria-describedby="tooltip284591" href="https://ahneta-advies.odoo.com/administratie#top">
+                           
+                          <br class="cn129" data-ditto-id="style-br-23" />
+                           
+                        </a>
+                         
+                      </p>
+                       
+                      <a class="cn130" data-ditto-id="style-heading-5" aria-describedby="tooltip284591" href="https://ahneta-advies.odoo.com/administratie#top">
+                         
+                      </a>
+                       
+                      <br class="cn131" data-ditto-id="style-font-13" />
+                       
+                      <p class="cn132" data-ditto-id="style-font-3"></p>
+                       
+                      <p class="cn133" data-ditto-id="style-div"></p>
+                       
+                    </div>
+                     
+                  </div>
+                   
+                </div>
+                 
+                <div class="cn134" data-ditto-id="style-p-4">
+                  <div class="cn135" data-ditto-id="style-font-41">
+                    <div class="cn136">
+                      <a class="cn137" data-ditto-id="style-heading-3" href="https://www.ahneta.nl/startende-ondernemer#top">
+                         
+                        <img class="cn138" data-ditto-id="style-span-17" alt="three person pointing the silver laptop computer" aria-describedby="tooltip968075" src="public/assets/cloned/images/c2f99a13466d.jpg" />
+                         
+                      </a>
+                       
+                    </div>
+                     
+                    <div class="cn139" data-ditto-id="style-link-6">
+                      <h3 class="cn140" data-ditto-id="style-font-4" aria-describedby="tooltip207515">
+                        <a class="cn141" data-ditto-id="style-font-14" href="https://www.ahneta.nl/startende-ondernemer#top">
+                          <span class="cn142" data-ditto-id="style-heading">
+                            3.
+                          </span>
+                           Startende Ondernemer
+                          <br class="cn143" data-ditto-id="style-link-7" />
+                        </a>
+                         
+                      </h3>
+                       
+                      <p class="cn144" data-ditto-id="style-font-5">
+                        Een op maat gesneden dienstenpakket met een aantal voordelen
+                      </p>
+                       
+                      <p class="cn145" data-ditto-id="style-font-42">
+                        <br class="cn146" data-ditto-id="style-span-16" />
+                         
+                        <a class="cn147" data-ditto-id="style-div-13" href="https://www.ahneta.nl/startende-ondernemer">
+                          Lees meer...
+                        </a>
+                         
+                        <br class="cn148" />
+                         
+                      </p>
+                       
+                    </div>
+                     
+                  </div>
+                   
+                </div>
+                 
+              </div>
+               
+            </div>
+             
+          </section>
+           
+          <section class="cn149" data-ditto-id="style-font-15">
+            <div class="cn150" data-ditto-id="style-font-10">
+              <h1 class="cn151" data-ditto-id="style-br-11">
+                <font class="cn152" data-ditto-id="style-heading-2">
+                   
+                  <u class="cn153" data-ditto-id="style-link-8">
+                     
+                    <a class="cn154" data-ditto-id="style-font-6" href="https://www.ahneta.nl/particulieren">
+                      Particulieren
+                    </a>
+                     
+                  </u>
+                   
+                </font>
+                 
+              </h1>
+               
+            </div>
+             
+          </section>
+           
+          <section class="cn155" data-ditto-id="style-font-24">
+            <div class="cn156" data-ditto-id="style-div-22"></div>
+             
+            <div class="cn157" data-ditto-id="style-div-11">
+              <div class="cn158" data-ditto-id="style-p-7" aria-describedby="tooltip283110">
+                <div class="cn159" data-ditto-id="style-font-7">
+                  <div class="cn160" data-ditto-id="style-font-35">
+                    <div class="cn161" data-ditto-id="style-link-9">
+                      <a class="cn162" data-ditto-id="style-i-3" href="https://www.ahneta.nl/aangifte-ib#top">
+                         
+                        <img class="cn163" data-ditto-id="style-link-10" alt="" aria-describedby="tooltip968075" src="public/assets/cloned/images/69326586a004.jpg" />
+                         
+                      </a>
+                       
+                    </div>
+                     
+                    <div class="cn164" data-ditto-id="style-i-2">
+                      <h3 class="cn165" data-ditto-id="style-link-11">
+                        <span class="cn166" data-ditto-id="style-i">
+                          1.
+                        </span>
+                         Aangifte Inkomstenbelasting
+                        <br class="cn167" data-ditto-id="style-section-2" />
+                      </h3>
+                       
+                      <p class="cn168" data-ditto-id="style-div-6" aria-describedby="tooltip704300">
+                         De verzorging van de aangifte inkomstenbelasting en de afhandeling van eventuele bezwaar- en beroepsschriften.
+                      </p>
+                       
+                      <p class="cn169" data-ditto-id="style-div-5" aria-describedby="tooltip704300">
+                        <a class="cn170" data-ditto-id="style-hr" href="https://www.ahneta.nl/aangifte-ib">
+                          Lees meer... 
+                        </a>
+                         
+                        <br class="cn171" data-ditto-id="style-section-6" />
+                         
+                      </p>
+                       
+                    </div>
+                     
+                  </div>
+                   
+                </div>
+                 
+                <div class="cn172" data-ditto-id="style-div-34">
+                  <div class="cn173" data-ditto-id="style-div-4">
+                    <div class="cn174" data-ditto-id="style-div-21">
+                      <a class="cn175" data-ditto-id="style-link-12" href="https://www.ahneta.nl/estate-planning#top">
+                         
+                        <img class="cn176" data-ditto-id="style-irketim-logosu" alt="blue ceramic vase on brown wooden table" aria-describedby="tooltip212933" src="public/assets/cloned/images/f85b184a3e69.jpg" />
+                         
+                      </a>
+                       
+                    </div>
+                     
+                    <div class="cn177" data-ditto-id="style-div-12">
+                      <h3 class="cn178" data-ditto-id="style-ul">
+                        <span class="cn179" data-ditto-id="style-li">
+                          2.
+                        </span>
+                        <a class="cn180" data-ditto-id="style-link-13" href="https://www.ahneta.nl/estate-planning#top">
+                          Estate 
+                        </a>
+                        Planning
+                        <br class="cn181" data-ditto-id="style-font-25" />
+                      </h3>
+                       
+                      <p class="cn182" data-ditto-id="style-font-16">
+                         Ahneta adviseert op gebied van Estate Planning (vermogensplanning).
+                      </p>
+                       
+                      <p class="cn183" data-ditto-id="style-li-3">
+                        <a class="cn184" data-ditto-id="style-font-22" href="https://www.ahneta.nl/estate-planning">
+                          Lees meer...
+                        </a>
+                         
+                        <br class="cn185" />
+                         
+                      </p>
+                       
+                    </div>
+                     
+                  </div>
+                   
+                </div>
+                 
+              </div>
+               
+            </div>
+             
+          </section>
+           
+          <section class="cn186" data-ditto-id="style-li-8">
+            <div class="cn187" data-ditto-id="style-link-14">
+              Onze referenties
+            </div>
+             
+            <div class="cn188" data-ditto-id="style-font-26">
+              <p class="cn189" data-ditto-id="style-font">
+                We zijn in goed gezelschap.
+              </p>
+               
+              <div class="cn190" data-ditto-id="style-li-4">
+                <div class="cn191" data-ditto-id="style-font-19">
+                   
+                </div>
+                 
+                <div class="cn192" data-ditto-id="style-font-43">
+                  <img class="cn193" data-ditto-id="style-li-11" alt="" aria-describedby="tooltip59665" src="public/assets/cloned/images/b44f136c8276.png" />
+                   
+                </div>
+                 
+                <div class="cn194" data-ditto-id="style-link-15">
+                   
+                </div>
+                 
+              </div>
+               
+            </div>
+             
+          </section>
+           
+        </div>
+         
+      </main>
+       
+      <footer class="cn195" data-ditto-id="style-font-27" id="bottom">
+        <div class="cn196" data-ditto-id="style-font-8" id="footer">
+          <section class="cn197" data-ditto-id="style-li-2">
+            <div class="cn198" data-ditto-id="style-font-33">
+              <div class="cn199" data-ditto-id="style-font-2">
+                <div class="cn200" data-ditto-id="style-li-12">
+                  <p class="cn201" data-ditto-id="style-link-16">
+                    <font class="cn202" data-ditto-id="style-font-28">
+                       
+                      <font class="cn203" data-ditto-id="style-font-34">
+                        Hoe kunnen we helpen
+                      </font>
+                       
+                    </font>
+                     
+                    <br class="cn204" />
+                     
+                  </p>
+                   
+                  <h4 class="cn205" data-ditto-id="style-font-17">
+                    <font class="cn206" data-ditto-id="style-font-11">
+                       
+                      <font class="cn207" data-ditto-id="style-li-13">
+                        U kunt altijd contact met ons opnemen 
+                      </font>
+                       
+                    </font>
+                     
+                  </h4>
+                   
+                </div>
+                 
+                <div class="cn208" data-ditto-id="style-link-17" aria-describedby="tooltip8305">
+                  <p class="cn209">
+                    <font class="cn210" data-ditto-id="style-font-18">
+                       
+                      <font class="cn211" data-ditto-id="style-div-2">
+                        Bel ons
+                      </font>
+                       
+                    </font>
+                     
+                  </p>
+                   
+                  <h5 class="cn212">
+                    <span class="cn213" data-ditto-id="style-div-8">
+                       
+                      <a class="cn214" data-ditto-id="style-div-14" href="tel:31 (0) 33 46 11 447">
+                         
+                        <font class="cn215" data-ditto-id="style-span-11">
+                           
+                          <font class="cn216" data-ditto-id="style-p">
+                            +31 (0) 33 46 11 447 
+                          </font>
+                           
+                        </font>
+                         
+                      </a>
+                       
+                    </span>
+                     
+                  </h5>
+                   
+                  <h5 class="cn217" data-ditto-id="style-link-18" aria-describedby="tooltip842231">
+                    <a class="cn218" data-ditto-id="style-div-15" href="tel:31 (0) 33 46 11 447">
+                       
+                      <font class="cn219">
+                         
+                        <font class="cn220" data-ditto-id="style-link-40">
+                          +31 (0) 6 11 23 88 30
+                        </font>
+                         
+                      </font>
+                       
+                    </a>
+                     
+                    <span class="cn221" data-ditto-id="style-image">
+                       
+                    </span>
+                     
+                  </h5>
+                   
+                </div>
+                 
+                <div class="cn222" data-ditto-id="style-link-19" aria-describedby="tooltip941693">
+                  <p class="cn223" data-ditto-id="style-website-cookies-bar">
+                    <font class="cn224" data-ditto-id="style-div-26">
+                       
+                      <font class="cn225">
+                        Stuur ons een bericht
+                      </font>
+                       
+                    </font>
+                     
+                    <br class="cn226" data-ditto-id="style-div-27" />
+                     
+                  </p>
+                   
+                  <h5 class="cn227" data-ditto-id="style-div-9">
+                    <a class="cn228" data-ditto-id="style-div-16" href="mailto:info@ahneta.nl">
+                       
+                      <font class="cn229">
+                         
+                        <font class="cn230" data-ditto-id="style-link-21">
+                          info@ahneta.nl
+                        </font>
+                         
+                      </font>
+                       
+                    </a>
+                     
+                  </h5>
+                   
+                </div>
+                 
+                <div class="cn231" data-ditto-id="style-font-21">
+                  <div class="cn232" data-ditto-id="style-font-36">
+                    <p class="cn233">
+                      <font class="cn234" data-ditto-id="style-font-20">
+                         
+                        <font class="cn235">
+                          Volg ons
+                        </font>
+                         
+                      </font>
+                       
+                    </p>
+                     
+                    <a class="cn236" data-ditto-id="style-li-6" href="https://www.ahneta.nl/website/social/twitter/">
+                       
+                      <i class="cn237" data-ditto-id="style-link-22">
+                        ​
+                      </i>
+                       
+                    </a>
+                     
+                    <a class="cn238" data-ditto-id="style-font-23" href="https://www.ahneta.nl/website/social/linkedin">
+                       
+                      <i class="cn239" aria-describedby="tooltip290654">
+                        ​
+                      </i>
+                       
+                    </a>
+                     
+                    <a class="cn240" data-ditto-id="style-li-7" href="https://www.ahneta.nl/website/social/instagram">
+                       
+                      <i class="cn241">
+                        ​
+                      </i>
+                       
+                    </a>
+                     
+                  </div>
+                   
+                </div>
+                 
+              </div>
+               
+            </div>
+             
+          </section>
+           
+          <section class="cn242">
+            <div class="cn243" data-ditto-id="style-li-5">
+              <div class="cn244" data-ditto-id="style-link-23">
+                <hr class="cn245" />
+                 
+              </div>
+               
+            </div>
+             
+          </section>
+           
+          <section class="cn246" data-ditto-id="style-font-37">
+            <div class="cn247">
+              <div class="cn248" data-ditto-id="style-div-10" aria-describedby="tooltip859185">
+                <div class="cn249">
+                  <a class="cn250" href="https://www.ahneta.nl/">
+                     
+                    <img class="cn251" data-ditto-id="style-span-18" alt="" aria-label="Şirketim logosu" role="img" src="public/assets/cloned/images/1461683c0d67.png" title="Benim şirketim" />
+                     
+                  </a>
+                   
+                </div>
+                 
+                <div class="cn252" data-ditto-id="style-p-6" aria-describedby="tooltip611099">
+                  <ul class="cn253" data-ditto-id="style-link-24" aria-describedby="tooltip612522">
+                    <li class="cn254" data-ditto-id="style-div-3">
+                       
+                      <a class="cn255" data-ditto-id="style-div-17" href="https://www.ahneta.nl/">
+                         
+                        <font class="cn256">
+                           
+                          <font class="cn257">
+                            Home
+                          </font>
+                           
+                        </font>
+                         
+                      </a>
+                       
+                    </li>
+                    <li class="cn258" data-ditto-id="style-link-25">
+                       
+                      <font class="cn259">
+                         
+                        <font class="cn260">
+                          •
+                        </font>
+                         
+                      </font>
+                       
+                    </li>
+                    <li class="cn261">
+                       
+                      <a class="cn262" data-ditto-id="style-div-18" href="#">
+                         
+                        <font class="cn263">
+                           
+                          <font class="cn264">
+                            Over ons
+                          </font>
+                           
+                        </font>
+                         
+                      </a>
+                       
+                    </li>
+                    <li class="cn265" data-ditto-id="style-avatar">
+                       
+                      <font class="cn266">
+                         
+                        <font class="cn267">
+                          •
+                        </font>
+                         
+                      </font>
+                       
+                    </li>
+                    <li class="cn268">
+                       
+                      <a class="cn269" data-ditto-id="style-span-14" href="#">
+                         
+                        <font class="cn270" data-ditto-id="style-span-21">
+                           
+                          <font class="cn271" aria-describedby="tooltip841579">
+                            Product
+                          </font>
+                           
+                        </font>
+                         
+                      </a>
+                       
+                    </li>
+                    <li class="cn272" data-ditto-id="style-span-19">
+                       
+                      <font class="cn273">
+                         
+                        <font class="cn274" data-ditto-id="style-section-3">
+                          •
+                        </font>
+                         
+                      </font>
+                       
+                    </li>
+                    <li class="cn275">
+                       
+                      <a class="cn276" data-ditto-id="style-div-19" href="#">
+                         
+                        <font class="cn277">
+                           
+                          <font class="cn278" aria-describedby="tooltip455312">
+                            Gebruiksvoorwaarden
+                          </font>
+                           
+                        </font>
+                         
+                      </a>
+                       
+                    </li>
+                    <li class="cn279" data-ditto-id="style-br-19">
+                       
+                      <font class="cn280">
+                         
+                        <font class="cn281">
+                          •
+                        </font>
+                         
+                      </font>
+                       
+                    </li>
+                    <li class="cn282">
+                       
+                      <a class="cn283" data-ditto-id="style-myquotecarousel617108" aria-describedby="tooltip848069" href="https://www.ahneta.nl/privacy">
+                         
+                        <font class="cn284">
+                           
+                          <font class="cn285" data-ditto-id="style-li-9">
+                            Privacybeleid
+                          </font>
+                           
+                        </font>
+                         
+                      </a>
+                       
+                    </li>
+                  </ul>
+                   
+                </div>
+                 
+              </div>
+               
+            </div>
+             
+          </section>
+           
+        </div>
+         
+        <div class="cn286" data-ditto-id="style-li-10">
+          <div class="cn287">
+            <div class="cn288" data-ditto-id="style-footer-2">
+              <div class="cn289" data-ditto-id="style-section-4">
+                <span class="cn290">
+                  Copyright © Ahneta Advies
+                </span>
+                 
+                <p class="cn291">
+                  <a class="cn292" data-ditto-id="style-div-20" href="https://www.ahneta.nl/cookie-policy">
+                    Cookiebeleid
+                  </a>
+                </p>
+              </div>
+               
+              <div class="cn293" data-ditto-id="style-p-5">
+                <div class="cn294">
+                   Aangeboden door 
+                  <a class="cn295" href="http://www.odoo.com/?utm_source=db&amp;utm_medium=website" target="_blank">
+                     
+                    <img class="cn296" data-ditto-id="style-br-20" alt="Odoo" height="20" src="public/assets/cloned/images/4bbdae104ba7.png" width="62" />
+                     
+                  </a>
+                   - Maak een 
+                  <a class="cn297" data-ditto-id="style-heading-4" href="http://www.odoo.com/app/website?utm_source=db&amp;utm_medium=website" target="_blank">
+                    gratis website
+                  </a>
+                   
+                </div>
+                 
+              </div>
+               
+            </div>
+             
+          </div>
+           
+        </div>
+         
+      </footer>
+       
+      <div class="cn298" id="website_cookies_bar">
+         
+      </div>
+       
+    </div>
+     
+    <div class="cn299">
+      <div class="cn300"></div>
+      <div class="cn301"></div>
+      <div class="cn302"></div>
+      <div class="cn303" data-ditto-id="style-font-38"></div>
+    </div>
+</body>
+</html>
