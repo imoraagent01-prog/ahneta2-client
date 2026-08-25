@@ -72,7 +72,7 @@ export default function SiteSearch({ pathname, variant = "desktop" }: SiteSearch
   return (
     <div ref={rootRef} className={`block relative z-0 ${isMobile ? "w-full" : ""}`}>
       <form
-        className={`block relative z-0 h-[40.38px] max-lg:h-100 ${isMobile ? "w-full" : ""}`}
+        className={isMobile ? "block relative z-0 w-full" : "block relative z-0 h-[40.38px] max-lg:h-100"}
         role="search"
         onSubmit={(e) => {
           e.preventDefault();

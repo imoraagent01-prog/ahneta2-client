@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import { gsap } from "gsap";
 import Tile from "./tile";
 import Link from "next/link";
 import SiteSearch from "./site-search";
@@ -55,6 +56,7 @@ export default function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<"bedrijven" | "particulieren" | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
+  const mobilePanelRef = useRef<HTMLDivElement>(null);
 
   const isHome = pathname === "/";
   const isDiensten = pathname === "/onze-diensten";
@@ -75,6 +77,48 @@ export default function SiteHeader() {
     setMobileOpen(false);
     setOpenDropdown(null);
   }, [pathname]);
+
+  // Slide + fade the mobile menu panel open/closed instead of an instant show/hide.
+  useEffect(() => {
+    const el = mobilePanelRef.current;
+    if (!el) return;
+    gsap.killTweensOf(el);
+    if (mobileOpen) {
+      el.style.display = "block";
+      const height = el.scrollHeight;
+      gsap.fromTo(
+        el,
+        { height: 0, opacity: 0 },
+        {
+          height,
+          opacity: 1,
+          duration: 0.35,
+          ease: "power2.out",
+          onComplete: () => {
+            el.style.height = "auto";
+          },
+        },
+      );
+    } else {
+      // el.style.height may currently be "auto" (set once the open animation finished), and
+      // GSAP can't reliably tween from that. Measure the real pixel height first so the close
+      // animation always starts from an explicit numeric value.
+      const currentHeight = el.scrollHeight;
+      gsap.fromTo(
+        el,
+        { height: currentHeight, opacity: 1 },
+        {
+          height: 0,
+          opacity: 0,
+          duration: 0.25,
+          ease: "power2.in",
+          onComplete: () => {
+            el.style.display = "none";
+          },
+        },
+      );
+    }
+  }, [mobileOpen]);
 
   function toggleDropdown(which: "bedrijven" | "particulieren") {
     setOpenDropdown((cur) => (cur === which ? null : which));
@@ -263,7 +307,7 @@ export default function SiteHeader() {
       >
         <div className="flex max-w-285 mx-auto px-[0.9375rem] flex-wrap justify-between items-center">
           <Link
-            className="block min-w-0 max-w-[75%] mr-4 shrink-0 text-color-002 [font-family:'Work_Sans',_'Odoo_Unicode_Support_Noto',_sans-serif] text-[2.1875rem] leading-13 whitespace-nowrap text-nowrap cursor-pointer max-lg:h-13"
+            className="block min-w-0 max-w-[40%] mr-2 shrink-0 text-color-002 [font-family:'Work_Sans',_'Odoo_Unicode_Support_Noto',_sans-serif] text-[2.1875rem] leading-13 whitespace-nowrap text-nowrap cursor-pointer max-lg:h-13"
             href="/"
           >
             <span className="inline" aria-label="Logo of Ahneta Advies" role="img" title="Ahneta Advies">
@@ -276,7 +320,30 @@ export default function SiteHeader() {
               />
             </span>
           </Link>
-          <ul className="flex min-w-0 items-center gap-2 [list-style-type:none] list-outside">
+          <ul className="flex min-w-0 items-center gap-2 shrink-0 [list-style-type:none] list-outside">
+            <li className="list-item min-w-0">
+              <button
+                className="border border-solid border-color-008 flex h-9 w-9 items-center justify-center rounded-[160px] text-color-001 cursor-pointer"
+                aria-controls="top_menu_collapse_mobile"
+                aria-expanded={mobileOpen}
+                aria-label="Zoeken openen"
+                type="button"
+                onClick={() => setMobileOpen(true)}
+              >
+                <svg viewBox="0 0 20 20" className="h-4.5 w-4.5" fill="none" stroke="currentColor" strokeWidth="1.8">
+                  <circle cx="9" cy="9" r="6.5" />
+                  <line x1="18" y1="18" x2="13.6" y2="13.6" strokeLinecap="round" />
+                </svg>
+              </button>
+            </li>
+            <li className="list-item min-w-0">
+              <Link
+                className="border border-solid border-accent flex h-9 items-center rounded-[160px] px-3 text-xs font-semibold text-accent whitespace-nowrap text-nowrap cursor-pointer"
+                href="/start"
+              >
+                Start nu
+              </Link>
+            </li>
             <li className="list-item min-w-0">
               <button
                 className="border border-solid border-color-008 block p-2 rounded-[160px] align-middle text-color-001 [font-family:'Work_Sans',_'Odoo_Unicode_Support_Noto',_sans-serif] text-center whitespace-nowrap text-nowrap cursor-pointer"
@@ -286,19 +353,30 @@ export default function SiteHeader() {
                 type="button"
                 onClick={() => setMobileOpen((v) => !v)}
               >
-                <span
-                  className="h-6 w-6 inline-block align-middle [background-size:100%] [background-position:50%_50%] bg-no-repeat"
-                  style={{
-                    backgroundImage:
-                      "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e\")",
-                  }}
-                />
+                <span className="relative block h-6 w-6 align-middle">
+                  <span
+                    className="absolute left-1 h-0.5 w-4 rounded-full bg-[rgba(0,0,0,0.55)] transition-[top,transform] duration-300 ease-in-out"
+                    style={mobileOpen ? { top: "11px", transform: "rotate(45deg)" } : { top: "6px", transform: "rotate(0deg)" }}
+                  />
+                  <span
+                    className="absolute left-1 top-[11px] h-0.5 w-4 rounded-full bg-[rgba(0,0,0,0.55)] transition-opacity duration-200 ease-in-out"
+                    style={{ opacity: mobileOpen ? 0 : 1 }}
+                  />
+                  <span
+                    className="absolute left-1 h-0.5 w-4 rounded-full bg-[rgba(0,0,0,0.55)] transition-[top,transform] duration-300 ease-in-out"
+                    style={mobileOpen ? { top: "11px", transform: "rotate(-45deg)" } : { top: "16px", transform: "rotate(0deg)" }}
+                  />
+                </span>
               </button>
             </li>
           </ul>
         </div>
-        {mobileOpen && (
-          <div id="top_menu_collapse_mobile" className="block bg-background border-t border-solid border-color-006">
+        <div
+          ref={mobilePanelRef}
+          id="top_menu_collapse_mobile"
+          className="block overflow-hidden bg-background border-t border-solid border-color-006"
+          style={{ height: 0, opacity: 0, display: "none" }}
+        >
             <div className="block px-4 py-3">
               <SiteSearch pathname={pathname} variant="mobile" />
             </div>
@@ -363,8 +441,7 @@ export default function SiteHeader() {
                 </a>
               </li>
             </ul>
-          </div>
-        )}
+        </div>
       </nav>
     </header>
   );
